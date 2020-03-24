@@ -1,0 +1,38 @@
+{
+    "name": "recoded/wp-query",
+    "description": "Query Wordpress posts directly from Laravel",
+    "type": "library",
+    "require": {
+        "php": "^7.4",
+        "ext-json": "*",
+        "laravel/framework": "^7.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "Recoded\\WpQuery\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Noël Hagestein",
+            "email": "contact@noel.codes"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Recoded\\WpQuery\\WpQueryServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": [
+            "php-cs-fixer fix --dry-run --verbose"
+        ]
+    }
+}

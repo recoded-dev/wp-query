@@ -1,0 +1,54 @@
+<?php
+
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+return Config::create()
+    ->setFinder(
+        Finder::create()
+            ->exclude('bootstrap/cache')
+            ->exclude('storage')
+            ->exclude('vendor')
+            ->in(__DIR__)
+    )
+    ->setRiskyAllowed(true)
+    ->setRules([
+        '@PSR1' => true,
+        '@PSR2' => true,
+        '@Symfony' => true,
+        'array_syntax' => [
+            'syntax' => 'short',
+        ],
+        'blank_line_after_opening_tag' => true,
+        'braces' => [
+            'allow_single_line_closure' => false,
+            'position_after_anonymous_constructs' => 'same',
+            'position_after_control_structures' => 'same',
+            'position_after_functions_and_oop_constructs' => 'next',
+        ],
+        'concat_space' => [
+            'spacing' => 'one',
+        ],
+        'elseif' => false,
+        'function_typehint_space' => true,
+        'no_blank_lines_after_class_opening' => true,
+        'no_empty_comment' => false,
+        'no_unused_imports' => true,
+        'no_useless_else' => true,
+        'no_useless_return' => true,
+        'no_superfluous_phpdoc_tags' => false,
+        'no_trailing_comma_in_list_call' => false,
+        'no_trailing_comma_in_singleline_array' => true,
+        'no_whitespace_before_comma_in_array' => true,
+        'ordered_imports' => true,
+        'phpdoc_inline_tag' => false,
+        'phpdoc_order' => true,
+        'phpdoc_scalar' => true,
+        'phpdoc_summary' => true,
+        'psr4' => true,
+        'short_scalar_cast' => true,
+        'single_blank_line_before_namespace' => true,
+        'ternary_operator_spaces' => true,
+        'trailing_comma_in_multiline_array' => true,
+        'yoda_style' => false,
+    ]);
