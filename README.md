@@ -1,6 +1,13 @@
 # WP Query
 wp-query is a simple way to query data from Wordpress in Laravel
 
+## Installation
+To install all you need to do is:
+```bash
+composer require recoded/wp-query
+```
+
+## Usage
 You can display a post very simply like this:
 ```php
 <?php
